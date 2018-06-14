@@ -22,7 +22,7 @@ public class MessageDAO {
 	
 	public int insertData(String name, String msg) throws Exception{
 		Connection con = this.getConnection();
-		String sql = "insert into messages values((message_seq.nextval,?,?)";
+		String sql = "insert into messages values(message_seq.nextval,?,?)";
 		PreparedStatement pstat = con.prepareStatement(sql);
 		
 		pstat.setString(1, name);
