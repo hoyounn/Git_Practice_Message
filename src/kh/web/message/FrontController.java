@@ -1,6 +1,7 @@
 package kh.web.message;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -29,18 +30,17 @@ public class FrontController extends HttpServlet {
 			}else if(command.equals("inputProc.do")) {
 				String name = request.getParameter("name");
 				String message = request.getParameter("message");
-				
+				int result = dao.insertData(name, message);
 				request.setAttribute("name", name);
 				request.setAttribute("message", message);
 				request.setAttribute("result", result);
 				isRedirect= false;
 				dst="inputView.jsp";
 			}else if(command.equals("output.do")) {
-				
+				List<MessageDTO> result = dao.viewAllData();
 				request.setAttribute("result", result);
 				isRedirect = false;
 				dst = "outputView.jsp";
-
 			}
 			
 		if(isRedirect) {
