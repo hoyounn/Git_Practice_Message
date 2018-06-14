@@ -31,6 +31,7 @@ public class FrontController extends HttpServlet {
 				String name = request.getParameter("name");
 				String message = request.getParameter("message");
 				int result = dao.insertData(name, message);
+				request.setAttribute("result", result);
 				isRedirect= false;
 				dst="inputView.jsp";
 			}else if(command.equals("output.do")) {
