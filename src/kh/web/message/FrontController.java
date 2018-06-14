@@ -24,17 +24,17 @@ public class FrontController extends HttpServlet {
 			String dst = null;
 			
 			MessageDAO dao = new MessageDAO();
-			if(command.equals("input.do")) {
+			if(command.equals("/input.do")) {
 				isRedirect = false;
 				dst="inputMessage.jsp";
-			}else if(command.equals("inputProc.do")) {
+			}else if(command.equals("/inputProc.do")) {
 				String name = request.getParameter("name");
 				String message = request.getParameter("message");
 				int result = dao.insertData(name, message);
 				request.setAttribute("result", result);
 				isRedirect= false;
 				dst="inputView.jsp";
-			}else if(command.equals("output.do")) {
+			}else if(command.equals("/output.do")) {
 				List<MessageDTO> result = dao.viewAllData();
 				request.setAttribute("result", result);
 				isRedirect = false;
