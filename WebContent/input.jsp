@@ -4,9 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Input View</title>
 </head>
 <body>
+	<form action="inputProc.do" method=get>
+
+		<input type=text name=name placeholder="name">
+		<input type=text name=message placeholder="message"> 
+		<input type=submit value="send">
+
+	</form>
+
+
 
 </body>
 </html>
