@@ -12,7 +12,7 @@
 
 	<c:if test="${requestScope.result != null}">
 
-		<table>
+		<table border=1>
 			<c:forEach var="item" items="${result}">
 				<tr>
 					<td>${item.name }</td>
