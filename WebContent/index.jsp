@@ -25,7 +25,6 @@ window.onload = function(){
 
 
 <body>
-<<<<<<< HEAD
 
 	<table border=1>
 
@@ -36,8 +35,5 @@ window.onload = function(){
 			<td><button id="toOutput">output</button>
 	</table>
 
-=======
-	
->>>>>>> DTO,DAO
 </body>
 </html>
