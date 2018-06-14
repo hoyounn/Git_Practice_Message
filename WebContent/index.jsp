@@ -17,7 +17,7 @@ window.onload = function(){
 		location.href = "input.do";		
 	}
 	document.getElementById("toOutput").onclick = function(){
-		location.href="output.do";
+		location.href = "output.do";
 	}
 }
 </script>
